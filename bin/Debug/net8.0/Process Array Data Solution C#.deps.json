@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Process Array Data Solution C#/1.0.0": {
+        "runtime": {
+          "Process Array Data Solution C#.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Process Array Data Solution C#/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
