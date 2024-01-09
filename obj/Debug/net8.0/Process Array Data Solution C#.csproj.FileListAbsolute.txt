@@ -26,3 +26,4 @@ C:\Users\desmo\Desktop\Projects\C#\Microsoft Learn C# Challenge Project\obj\Debu
 C:\Users\desmo\Desktop\Projects\C#\Microsoft Learn C# Challenge Project\obj\Debug\net8.0\Process Array Data Solution C#.pdb
 C:\Users\desmo\Desktop\Projects\C#\Microsoft Learn C# Challenge Project\obj\Debug\net8.0\Process Array Data Solution C#.genruntimeconfig.cache
 C:\Users\desmo\Desktop\Projects\C#\Microsoft Learn C# Challenge Project\obj\Debug\net8.0\ref\Process Array Data Solution C#.dll
+C:\Users\desmo\Desktop\Projects\C#\Microsoft Learn C# Challenge Project\obj\Debug\net8.0\Process Array Data Solution C#.sourcelink.json
