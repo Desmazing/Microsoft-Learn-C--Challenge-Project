@@ -21,6 +21,7 @@ Console.WriteLine("-------\t----------\t-------\t-----\t------------");
 
 foreach (string student in studentNames)
 {
+    int [] studentScores = [0,0,0,0,0];
     decimal sumScores = 0;
     decimal examTotal = 0;
     decimal examAverage;
@@ -30,61 +31,21 @@ foreach (string student in studentNames)
 
     if (student == "Alice")
     {
-        foreach (int mark in aliceScores)
-        {
-            gradedAssignments += 1;
-            if (gradedAssignments <= examAssignments)
-            {
-                sumScores += mark;
-                examTotal += mark;
-            }
-            else
-            {
-                creditNumber = aliceScores.Length - 5;
-                sumScores += mark/10;
-                creditAverage += mark;
-            }    
-        }
+        studentScores = aliceScores;
     }
     else if (student == "Brian")
     {
-        foreach (int mark in brianScores)
-        {
-            gradedAssignments += 1;
-            if (gradedAssignments <= examAssignments)
-            {
-                sumScores += mark;
-                examTotal += mark;
-            }
-            else
-            {
-                creditNumber = brianScores.Length - 5;
-                sumScores += mark/10;
-                creditAverage += mark;
-            } 
-        }
+        studentScores = brianScores;
     }
     else if (student == "Carl")
     {
-        foreach (int mark in carlScores)
-        {
-            gradedAssignments += 1;
-            if (gradedAssignments <= examAssignments)
-            {
-                sumScores += mark;
-                examTotal += mark;
-            }
-            else
-            {
-                creditNumber = carlScores.Length - 5;
-                sumScores += mark/10;
-                creditAverage += mark;
-            } 
-        }
+        studentScores = carlScores;
     }
     else if (student == "Dean")
     {
-        foreach (int mark in deanScores)
+        studentScores = deanScores;
+    }
+    foreach (int mark in studentScores)
         {
             gradedAssignments += 1;
             if (gradedAssignments <= examAssignments)
@@ -94,12 +55,11 @@ foreach (string student in studentNames)
             }
             else
             {
-                creditNumber = deanScores.Length - 5;
+                creditNumber = studentScores.Length - 5;
                 sumScores += mark/10;
                 creditAverage += mark;
-            } 
+            }
         }
-    }
 
     averageScore = Math.Round((decimal)sumScores / examAssignments, 2);
     examAverage = Math.Round((decimal)examTotal / examAssignments, 2);
