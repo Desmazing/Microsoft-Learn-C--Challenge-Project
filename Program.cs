@@ -16,13 +16,17 @@ int [] brianScores = [76,75,72,70,85,89];
 int [] carlScores = [82,78,75,90,67,89,89,89];
 int [] deanScores = [62,90,84,80,64,96];
 
-Console.WriteLine($"Student\t\tGrade");
-Console.WriteLine("---------------------");
+Console.WriteLine($"Student\tExam Score\tOverall\tGrade\tExtra Credit");
+Console.WriteLine("-------\t----------\t-------\t-----\t------------");
 
 foreach (string student in studentNames)
 {
     decimal sumScores = 0;
+    decimal examTotal = 0;
+    decimal examAverage;
+    decimal creditAverage = 0;
     int gradedAssignments = 0;
+    int creditNumber = 0;
 
     if (student == "Alice")
     {
@@ -32,10 +36,13 @@ foreach (string student in studentNames)
             if (gradedAssignments <= examAssignments)
             {
                 sumScores += mark;
+                examTotal += mark;
             }
             else
             {
+                creditNumber = aliceScores.Length - 5;
                 sumScores += mark/10;
+                creditAverage += mark;
             }    
         }
     }
@@ -47,10 +54,13 @@ foreach (string student in studentNames)
             if (gradedAssignments <= examAssignments)
             {
                 sumScores += mark;
+                examTotal += mark;
             }
             else
             {
+                creditNumber = brianScores.Length - 5;
                 sumScores += mark/10;
+                creditAverage += mark;
             } 
         }
     }
@@ -62,10 +72,13 @@ foreach (string student in studentNames)
             if (gradedAssignments <= examAssignments)
             {
                 sumScores += mark;
+                examTotal += mark;
             }
             else
             {
+                creditNumber = carlScores.Length - 5;
                 sumScores += mark/10;
+                creditAverage += mark;
             } 
         }
     }
@@ -77,15 +90,19 @@ foreach (string student in studentNames)
             if (gradedAssignments <= examAssignments)
             {
                 sumScores += mark;
+                examTotal += mark;
             }
             else
             {
+                creditNumber = deanScores.Length - 5;
                 sumScores += mark/10;
+                creditAverage += mark;
             } 
         }
     }
 
     averageScore = Math.Round((decimal)sumScores / examAssignments, 2);
+    examAverage = Math.Round((decimal)examTotal / examAssignments, 2);
 
     if (averageScore >= 97){studentGrade = "A+";}
     else if (averageScore >= 93){studentGrade = "A";}
@@ -101,7 +118,7 @@ foreach (string student in studentNames)
     else if (averageScore >= 60){studentGrade = "D-";}
     else if (averageScore >= 0){studentGrade = "F";}
 
-Console.WriteLine($"{student}\t\t{averageScore}\t{studentGrade}");
+Console.WriteLine($"{student}\t{examAverage}\t\t{averageScore}\t{studentGrade}\t{Math.Round(creditAverage/creditNumber, 2)} ({averageScore-examAverage} points)");
 }
 
 Console.WriteLine("\nPlease press Enter to continue: ");
