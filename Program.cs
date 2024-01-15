@@ -6,7 +6,7 @@ branches and calculations required to satisfy an updated feature specification.
 */
 
 int examAssignments = 5;
-string studentGrade = "F";
+string studentGrade = "A";
 string [] studentNames = ["Alice", "Brian", "Carl", "Dean"];
 
 decimal averageScore;
